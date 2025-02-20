@@ -25,8 +25,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   function rememberMyFilms() {
     for (let i = 0; i < 1; i++) {
-      const a = prompt('Один из последних просмотренных фильмов?'),
-        b = prompt('На сколько оцените его?')
+      const a = prompt('Один из последних просмотренных фильмов?').trim(),
+        b = prompt('На сколько оцените его?').trim();
+
       if (a != '' && b != '' && a != null & b != null && a.length < 50) {
         console.log('Done!');
       } else {
