@@ -134,3 +134,74 @@ const numbers = {
     y: 4
   }
 }
+
+function copyA(mainObject) {
+  let objCopy = {};
+  let key;
+  for (key in mainObject) {
+    objCopy[key] = mainObject[key];
+  }
+  return objCopy
+}
+const someThing = copyA(numbers);
+someThing.a = 5
+console.log(someThing);
+
+
+const video = ['sdadas', 'dasdasd', 'dasxzvc'],
+  blogs = ['vcxzcx', 'xzvsa', ',mytgf'],
+  internet = [...video, ...blogs, 'czxczx', 'rtegvcb'];
+
+console.log(internet);
+console.log(internet.length);
+
+function loG(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+
+const NUM = [2, 5, 7];
+
+loG(...NUM)
+
+const ARR = [2, 5, 7, 9];
+const NEWARR = [...ARR];
+NEWARR[0] = 10;
+
+console.log(NEWARR);
+console.log(ARR);
+
+
+const Q = {
+  one: 51,
+  two: 52
+}
+
+const newQ = { ...Q };
+
+newQ.one = 55;
+console.log(Q);
+console.log(newQ);
+
+
+function shit(MAINOBJ) {
+  let NEWOBJ = {};
+  let key;
+  for (key in MAINOBJ) {
+    NEWOBJ[key] = MAINOBJ[key]
+  }
+  return NEWOBJ;
+}
+
+const NUMM = {
+  a: 52,
+  b: 53,
+  c: 55,
+}
+
+const HYITA = shit(NUMM);
+HYITA.a = 100;
+console.log(NUMM);
+console.log(HYITA);
+
