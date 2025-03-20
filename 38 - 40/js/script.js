@@ -38,3 +38,16 @@ const c3 = increment();
 
 console.log(c1, c2, c3);
 
+function createrCounter() {
+  let counter = 0;
+  const mFun = function () {
+    counter = counter + 1;
+    return counter;
+  }
+  return mFun
+}
+const int = createrCounter();
+const cp0 = int();
+const cp1 = int();
+const cp2 = int();
+console.log(cp0, cp1, cp2);
